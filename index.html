@@ -45,19 +45,14 @@
     const stars = new THREE.Points(starGeometry, starMaterial);
     scene.add(stars);
 
-    // Foto dari Google Drive
+    // Foto dari GitHub Pages (folder images)
     const textureLoader = new THREE.TextureLoader();
     const photoLinks = [
-      "https://drive.google.com/uc?export=view&id=1vARQtillkR8i6-gV3wns4ovGwqKo91su",
-      "https://drive.google.com/uc?export=view&id=1mW7h9SUloL9rkYgCcU6rfGFVgq0doQxV",
-      "https://drive.google.com/uc?export=view&id=1yFNzjG9WY-eZvjAKyKGmCG-ylCrdNcaQ",
-      "https://drive.google.com/uc?export=view&id=1945Q3L-goAUUKN0X3rNN8YPFk9PQhNWM",
-      "https://drive.google.com/uc?export=view&id=1d2N4Dy_6YRiLlNhRlc4ylslfIwNc3xfB",
-      "https://drive.google.com/uc?export=view&id=1CRLEC2XJlE2cX1kJ3uH2daCAaGC9Fsuw",
-      "https://drive.google.com/uc?export=view&id=1BuJPiQEFh1-nw5WsPgYRUCFmDP8aBQMJ",
-      "https://drive.google.com/uc?export=view&id=1LArkFLRBf_04vTnpzYSNVnkz_M-yBhbv",
-      "https://drive.google.com/uc?export=view&id=1mTc3NkcvWEIl2Ym4NpuWZEzwNLXzPmYU",
-      "https://drive.google.com/uc?export=view&id=1FzB4YE1egVCdUpse0rid09ah1CiM6eQx"
+      "https://USERNAME.github.io/Galaxy/images/foto1.jpg",
+      "https://USERNAME.github.io/Galaxy/images/foto2.jpg",
+      "https://USERNAME.github.io/Galaxy/images/foto3.jpg",
+      "https://USERNAME.github.io/Galaxy/images/foto4.jpg",
+      "https://USERNAME.github.io/Galaxy/images/foto5.jpg"
     ];
 
     const photoMeshes = [];
@@ -75,7 +70,7 @@
       photoMeshes.push(mesh);
     });
 
-    // Bentuk hati pink utuh dengan path parametris
+    // Bentuk hati pink utuh
     const heartShape = new THREE.Shape();
     const scale = 1.2;
     for (let t = 0; t <= 2 * Math.PI; t += 0.01) {

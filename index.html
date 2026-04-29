@@ -63,7 +63,12 @@
 
     const photoMeshes = [];
     photoLinks.forEach(link => {
-      const texture = textureLoader.load(link);
+      const texture = textureLoader.load(
+        link,
+        () => console.log("Loaded:", link),
+        undefined,
+        () => console.error("Error loading:", link)
+      );
       const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
       const geometry = new THREE.PlaneGeometry(10, 10);
       const mesh = new THREE.Mesh(geometry, material);
